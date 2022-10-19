@@ -57,7 +57,6 @@ int main()
 	{
 		int wartosc = 3;
 		table[i] = waga_1(pesel[i], wartosc);
-		cout << table[i];
-	}
+		cout << table[i]; 
 
 }
