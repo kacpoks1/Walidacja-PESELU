@@ -1,63 +1,36 @@
 #include <iostream>
 #include <string>
-#include <cstdlib>
 
 using namespace std;
 
-int waga_1(int a, int b)
+
+int main ()
 {
-	int w = 0;
-	w = a * b;
-	return w;
-}
-
-int waga_3(int a, int b)
-{
-	int w = 0;
-	w = a * b;
-	return w;
-}
-
-int waga_7(int a, int b)
-{
-	int w = 0;
-	w = a * b;
-	return w;
-}
-
-int waga_9(int a, int b)
-{
-	int w = 0;
-	w = a * b;
-	return w;
-}
-
-int main()
-{
-	string pesel;
-	const int table_size = 11;
-	int table[table_size];
-	int i;
-	cout << "Podaj swój numer PESEL: ";
-}
-
-	
-
-	getline(cin, pesel);
-
-
-	for (i = 0; i < 9; i += 4)
+	string pesel; 
+	cout << "Podaj numer PESEL: ";
+	cin >> pesel;
+	int waga[] = { 1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1};
+	int suma = 0;
+	if (walidacja(suma))
 	{
-		int wartosc = 1;
-		int y = pesel.c_str()[i] - '0';		
-		table[i] = waga_1(y, wartosc);
-		cout << table[i];
+		cout << "PESEL jest poprawny";
+	}
+	
+	else
+	{
+		cout << "PESEL nie jest poprawny";
 	}
 
-	for (i = 2; i < 10; i += 4)
-	{
-		int wartosc = 3;
-		table[i] = waga_1(pesel[i], wartosc);
-		cout << table[i]; 
+	return 0;
+}
 
+int  walidacja(string pesel, int waga, int suma)
+{
+	suma = 0;
+	for (int i = 0; i < 11; i++)
+	{
+		suma += ((pesel[i]) - '0') * waga[i];
+	}
+
+	return suma % 10 == 0;
 }
