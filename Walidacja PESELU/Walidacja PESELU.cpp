@@ -38,9 +38,10 @@ int main()
 	const int table_size = 11;
 	int table[table_size];
 	int i;
-
-
 	cout << "Podaj swój numer PESEL: ";
+}
+
+	
 
 	getline(cin, pesel);
 
