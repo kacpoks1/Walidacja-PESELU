@@ -11,9 +11,9 @@ int main()
     cout << "Podaj numer PESEL: ";
     cin >> pesel;
     int waga[] = { 1, 3, 7, 9, 1, 3, 7, 9, 1, 3, 1 };
-    int suma = walidacja(pesel, waga);
+    int z = walidacja(pesel, waga);
 
-    if (suma % 10 == 0)
+    if (z % 10 == 0)
     {
         cout << "PESEL jest poprawny" << endl;
     }
