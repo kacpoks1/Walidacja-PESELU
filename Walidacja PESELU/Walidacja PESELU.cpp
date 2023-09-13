@@ -34,7 +34,14 @@ int main()
         cout << "PESEL nie jest poprawny" << endl;
     }
 
-    return 0;
+    cout << "wpisz q zeby zakonczyc";
+
+    char op;
+    cin >> op;
+
+    switch (op) {
+        case 'q':
+            break;
+    }
+
 }
-
-
